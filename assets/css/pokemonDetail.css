@@ -5,7 +5,7 @@
   background-color: #fff;
 }
 
-.header {
+.header-bar {
   font-size: 1.5rem;
   padding: 1.5rem  1rem 1rem  1rem;
   display: flex;
@@ -22,6 +22,7 @@
 
   &:hover {
     cursor: pointer;
+    filter: brightness(40%);
   }
 }
 
@@ -50,7 +51,7 @@ svg {
 
 #checkbox:checked + label svg {
     #heart {
-      transform: scale(.2);
+      transform: scale(.7);
       fill: #E2264D;
       animation: animateHeart .3s linear forwards .25s;
     }
@@ -60,6 +61,10 @@ svg {
       animation: animateCircle .3s linear forwards;
       opacity: 1;
     }
+  }
+
+#heart:hover{
+  fill: #E2264D;
   }
 
 .normal {
@@ -155,10 +160,6 @@ svg {
   opacity: 0.2;
 }
 
-.pokemon:hover {
-  filter: brightness(120%);
-}
-
 .pokemon .number {
   color: #000;
   opacity: 0.2;
@@ -201,9 +202,77 @@ svg {
     height: 180px;
     position: absolute;
     z-index: 2;
-    bottom: -2rem;
+    bottom: -1rem;
     right: 25%;
     filter: drop-shadow(2px 6px 7px rgb(0 0 0 / 0.4));
+}
+
+.container-detail {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -30px;
+  padding: 3.5rem 1rem;
+  border-radius: 32px;
+  background-color: #ffffff;
+}
+
+.container-detail .content-detail .nav-bar {
+  display: flex;
+  justify-content: space-around;
+  color: #cccccc;
+}
+
+.container-detail .content-detail .nav-bar .item {
+  border-bottom: 1px solid transparent;
+  padding: 1rem 0;
+  font-size: 0.875rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.container-detail .content-detail .nav-bar :first-child {
+  color: #000000;
+  border-color: #000000;
+}
+
+h4 {
+  padding: 0.5rem 0 0 1.5rem;
+}
+
+.about, .breeding {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+}
+
+.title, .info {
+  color: #999999;
+}
+
+
+.title-item, .info-item {
+  padding: .625rem 0;
+}
+.info-item {
+  color: black;
+}
+
+ol li {
+  list-style: none;
+}
+
+.gender {
+  display: flex;
+  padding: .625rem 0;
+  gap: 24px
+}
+
+.gender img {
+  height: 16px;
 }
 
 
